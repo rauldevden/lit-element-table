@@ -1,0 +1,49 @@
+$light-color: var(--light-color, #F5F5F5);
+$lightgray-color: var(--light-color, #bcccce);
+$gray-color: var(--light-color, #49585A);
+$dark-color: var(--dark-color, #02010A);
+$accent-primary: var(--accent-primary, #3482D5);
+$accent-primary-dark: var(--acent-primary-dark, #162E64);
+$accent-secondary: var(--accent-secondary, #FF7C5C);
+
+
+$icon-size: var(--icon-size, 32px);
+
+@mixin transition($elem){
+  transition: $elem 200ms ease-in-out;
+}
+
+
+.icon {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  
+  mask-size: cover;
+  background: $dark-color;
+
+  &:hover{
+    background-color: $accent-primary;
+  }
+}
+
+.star {
+  background: $lightgray-color;
+  border: inset 1px solid $gray-color;
+  mask-image: url("./src/assets/icons/iconfinder_star.svg");
+  @include transition(transform);
+
+  &:hover{
+    transform: scale(1.3);
+    @include transition(transform);
+    background-color: $accent-secondary !important;
+  }
+
+  &.selected{
+    background-color: $accent-primary;
+  }
+}
+
+.more{
+  mask-image: url("./src/assets/icons/iconfinder_more.svg");
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>input-default demo</title>
+
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <script type="module">
+    import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+    import '@polymer/iron-demo-helpers/demo-snippet';
+  </script>
+
+  <script type="module" src="../input-number.js"></script>
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
+</head>
+
+<body>
+
+  <bbva-core-demo-helper events='["input-number-change", "keyup", "change"]' breakpoints='{
+    "mobile": {"width": 320, "height": 580, "name": "Mobile"},
+    "tablet": {"width": 768, "height": 1024, "name": "Tablet"},
+    "desktop": {"width": 1024, "height": 768, "name": "Desktop"}' available-ambients='[]' resolution="desktop">
+    
+    <bbva-core-demo-case heading="Empty" description="Componente vacío, solo el 'identifier'">
+      <template>
+        <input-number identifier="basic"></input-number> 
+      </template>
+    </bbva-core-demo-case>
+    <!-- otros casos -->
+    <bbva-core-demo-case heading="1 Valor" description="Componente con 'identifier' y 'valor'">
+      <template>
+        <input-number identifier="Food" valor="Tesla Model S"></input-number>
+      </template>
+    </bbva-core-demo-case>
+
+
+  </bbva-core-demo-helper>
+
+</body>
+
+</html>

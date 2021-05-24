@@ -1,0 +1,20 @@
+
+<body>
+
+  <bbva-core-demo-helper  events='["tooltip-actions-action-click"]'  breakpoints='{
+    "mobile": {"width": 320, "height": 580, "name": "Mobile"},
+    "tablet": {"width": 768, "height": 1024, "name": "Tablet"},
+    "desktop": {"width": 1024, "height": 768, "name": "Desktop"}' resolution="desktop">
+    
+    <bbva-core-demo-case heading="Default" description="">
+      <template>
+        <button @click="displayTooltip">Display Tooltip</button>
+        <tooltip-actions id-tooltip="tooltip"></tooltip-actions> 
+        <script>
+
+          document.querySelector('tooltip-actions').showTooltip();
+        </script>
+      </template>
+    </bbva-core-demo-case>
+
+</body>

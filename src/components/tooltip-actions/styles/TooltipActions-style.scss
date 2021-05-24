@@ -1,0 +1,72 @@
+$light-color: var(--light-color, #F5F5F5);
+$lightgray-color: var(--light-color, #cccccc);
+$gray-color: var(--light-color, #49585A);
+$dark-color: var(--dark-color, #02010A);
+$accent-primary: var(--accent-primary, #00a3ee);
+$accent-primary-dark: var(--acent-primary-dark, #162E64);
+$accent-secondary: var(--accent-secondary, #FF7C5C);
+
+@mixin transition($elem){
+  transition: $elem 200ms ease-in-out;
+}
+
+@mixin final-position{
+  transform: translateX(20%) translateY(-60%);
+}
+
+
+.tooltip{
+  position: absolute;
+  display: none;
+  z-index: 9;
+  padding: 1em;
+  background-color: $accent-primary-dark;
+  color: $light-color;
+
+  box-shadow: 1px 1px 3px 0 $gray-color;
+  text-align: center;
+  border-radius: .3em;
+
+  
+
+  .action{
+    padding: .6em;
+    margin: .4em 0;
+    border-radius: .3em;
+    cursor: pointer;
+
+    @include transition(background-color);
+
+    &:hover{
+      background-color: $light-color;
+      color: $dark-color;
+
+      @include transition(background-color);
+      @include transition(color);
+    }
+  }
+}
+
+.display{
+  display: block;
+
+  animation: var(--tooltip-deploy-direction, deploy-bottom) var(--tooltip-deploy-time, 200ms) forwards ease-out;
+}
+
+@keyframes deploy-top {
+  0%{
+    transform: translateX(20%) translateY(-100%);
+  }
+  100%{
+    @include final-position();
+  }
+}
+
+@keyframes deploy-bottom {
+  0%{
+    transform: translateX(20%) translateY(20%);
+  }
+  100%{
+    @include final-position();
+  }
+}

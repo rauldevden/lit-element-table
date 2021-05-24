@@ -1,0 +1,10 @@
+$light-color: var(--light-color, #fff);
+$dark-color: var(--dark-color,#2A2D34);
+$accent-color: var(--accent-color,#0ABAFF);
+$accent-secondary: var(--accent-secondary,#F2C769);
+
+div{
+    font-size: 1.3em;
+    padding-top: var(--padding-top, .3em);
+    padding-bottom: var(--padding-bottom, .3em);
+}

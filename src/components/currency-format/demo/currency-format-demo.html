@@ -1,0 +1,37 @@
+
+
+<body>
+
+  <bbva-core-demo-helper breakpoints='{
+    "mobile": {"width": 320, "height": 580, "name": "Mobile"},
+    "tablet": {"width": 768, "height": 1024, "name": "Tablet"},
+    "desktop": {"width": 1024, "height": 768, "name": "Desktop"}' available-ambients='[]' resolution="desktop">
+    
+    <bbva-core-demo-case heading="Euros" description="Component that shows the amount given in euros">
+      <template>
+       <currency-format amount="200" currencty="EUR"></currency-format>
+      </template>
+    </bbva-core-demo-case>
+    
+    <bbva-core-demo-case heading="US Dollars" description="Component that shows the amount given in US Dollars">
+      <template>
+       <currency-format amount="200" currencty="USD"></currency-format>
+      </template>
+    </bbva-core-demo-case>
+
+    <bbva-core-demo-case heading="Yens" description="Component that shows the amount given in Japanese Yens">
+      <template>
+       <currency-format amount="200" currencty="JPY"></currency-format>
+      </template>
+    </bbva-core-demo-case>
+
+    <bbva-core-demo-case heading="Pounds" description="Component that shows the amount given in Brithis pund sterling">
+      <template>
+       <currency-format amount="200" currencty="GBP"></currency-format>
+      </template>
+    </bbva-core-demo-case>
+
+
+  </bbva-core-demo-helper>
+
+</body>

@@ -1,0 +1,41 @@
+$light-color: var(--light-color, #F5F5F5);
+$lightgray-color: var(--light-color, #bcccce);
+$gray-color: var(--light-color, #49585A);
+$dark-color: var(--dark-color, #02010A);
+$accent-primary: var(--accent-primary, #00a3ee);
+$accent-primary-dark: var(--acent-primary-dark, #162E64);
+$accent-secondary: var(--accent-secondary, #FF7C5C);
+
+@mixin transition($elem){
+    transition: $elem 200ms ease-in-out;
+}
+
+.row-group-style{
+
+    color: $dark-color;
+
+    box-sizing: border-box;
+    margin: 0;
+
+    box-shadow: inset 0 -1px 0 0 $lightgray-color;
+
+    @include transition(box-shadow);
+
+    &:hover{
+        box-shadow: inset 0 -3px 0 0 $lightgray-color;
+
+        @include transition(box-shadow);
+    }
+
+    .row-title{
+        color: $accent-primary;
+        font-size: 1.3em;
+    }
+
+    tooltip-actions{
+        z-index: 99;
+        transform: translateX(-30%);
+
+    }
+
+}

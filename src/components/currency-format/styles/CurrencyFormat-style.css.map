@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,GAAG,CAAA;EACC,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,yBAAwB;EACrC,cAAc,EAAE,4BAA2B;CAC9C",
+    "sources": [
+        "CurrencyFormat-style.scss"
+    ],
+    "names": [],
+    "file": "CurrencyFormat-style.css"
+}
