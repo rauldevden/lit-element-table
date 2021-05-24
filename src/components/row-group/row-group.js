@@ -29,6 +29,7 @@ export class RowGroup extends LitElement {
       tooltipActions: {type: Array},
 
       hola: {type: Boolean},
+      hola: {type: String},
 
     };
   }
