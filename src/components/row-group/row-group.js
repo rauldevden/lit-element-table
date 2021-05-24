@@ -116,7 +116,7 @@ export class RowGroup extends LitElement {
           ${this.infoRow.title}
         </div>
 
-      </div>
+      </div>asdas
 
       <div class="col-4 row m-0 text-end d-flex align-items-center">
         <!-- AVAILABLE -->
