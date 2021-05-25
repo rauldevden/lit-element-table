@@ -27,10 +27,6 @@ export class RowGroup extends LitElement {
       infoRow: {type: Object, attribute: 'info-row'},
 
       tooltipActions: {type: Array},
-
-      hola: {type: Boolean},
-      hola: {type: String},
-
     };
   }
 
