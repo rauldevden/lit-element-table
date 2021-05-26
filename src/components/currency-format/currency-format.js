@@ -33,7 +33,7 @@ export class CurrencyFormat extends LitElement {
   }
 
   
-  _displayTotal(){
+  get _displayTotal(){
     let currencies = [];
     currencies['USD'] = {'currency': "$" , 'format': 'en-IN'} ;
     currencies['EUR'] = {'currency': "€" , 'format': 'de-DE'} ;
@@ -49,7 +49,7 @@ export class CurrencyFormat extends LitElement {
 
   render(){
       return html`
-        ${this._displayTotal()}
+        ${this._displayTotal}
       `;
   }
 

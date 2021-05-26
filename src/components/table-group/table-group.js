@@ -4,6 +4,8 @@ import { LitElement, html } from 'lit-element';
 import bootstrap from './styles/TableGroup-bootstrap.js';
 import font from './styles/font/TitilliumWeb-font.js';
 
+import {dataTable} from './config/config-data';
+
 // COMPONENTES
 import '../row-group/row-group.js';
 
@@ -32,34 +34,9 @@ export class TableGroup extends LitElement {
   constructor(){
       super();
 
-      this.infoTable = [
-        {
-          id:'kfc',
-          fav: true,
-          title:'KFC Nassica',
-          available: 2500,
-          amount: 270000,
-          currency: 'EUR',          
-        },
-        {
-          id:'nike',
-          fav: false,
-          title:'Nike CC El Reston',
-          available: 64.95,
-          amount: 64.95,
-          currency: 'USD',
-         
-        },
-        {
-          id:'amazon',
-          fav: true,
-          title:'AmazonWeb',
-          available: 0,
-          amount: 3.45,
-          currency: 'JPY',
-         
-        }
-      ];
+      console.log(dataTable);
+
+      this.infoTable = dataTable;
 
       document.addEventListener('row-group-fav-click', (e) =>{
         this._getRow(e.detail.id).changeFav(!e.detail.faved);
@@ -67,7 +44,7 @@ export class TableGroup extends LitElement {
 
   }
 
-  _displayTableInfo(){
+  get _displayTableInfo(){
     let totalAmount = 0;
     let totalAvailable = 0;
     let numRows = 0;
@@ -92,7 +69,7 @@ export class TableGroup extends LitElement {
     `
   }
 
-  _displayTableHeader(){
+  get _displayTableHeader(){
     return html `
       <div class="row">
 
@@ -127,7 +104,7 @@ export class TableGroup extends LitElement {
     `
   }
 
-  _displayRows(){
+  get _displayRows(){
     return html`
     
     ${this.infoTable.map((row) => {
@@ -147,9 +124,9 @@ export class TableGroup extends LitElement {
       return html`
       <div class="container bg-light rounded p-5 d-flex justify-content-center align-items center">
         <div class="row">
-          ${this._displayTableInfo()}
-          ${this._displayTableHeader()}
-          ${this._displayRows()}
+          ${this._displayTableInfo}
+          ${this._displayTableHeader}
+          ${this._displayRows}
         </div>
       </div>
       `;
